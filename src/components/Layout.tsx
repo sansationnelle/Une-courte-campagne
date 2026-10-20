@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import logo from '../img/logo.png';
+import { Get_bg_color, Get_header_color } from "./utilis/light-dark_mode";
 
 const links = [
   { to: "/", label: "Accueil", end: false },
@@ -8,17 +9,16 @@ const links = [
 const Layout = () => {
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#a68f67]">
-      <header className="bg-[#e9dbc2] shadow-md">
+    <div style={{backgroundColor: Get_bg_color()}} className="flex min-h-screen flex-col">
+      <header style={{backgroundColor: Get_header_color()}} className="shadow-md">
         <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-6 py-4">
           <span className="text-xl font-bold tracking-tight text-white">
             <img src={logo} width={50} height={50} className="fit-picture" alt="Une Courte Campagne"></img>
           </span>
         <nav className="mb-8 flex gap-4 text-slate-50">
         <NavLink to="/" className={({ isActive }) => (isActive ? "font-bold" : "")}>Accueil</NavLink>
-        <NavLink to="/personages" className={({ isActive }) => (isActive ? "font-bold" : "")}>Personages</NavLink>
         <NavLink to="/regles" className={({ isActive }) => (isActive ? "font-bold" : "")}>Règles</NavLink>
-        <NavLink to="/faction" className={({ isActive }) => (isActive ? "font-bold" : "")}>Faction</NavLink>
+        <NavLink to="/factions" className={({ isActive }) => (isActive ? "font-bold" : "")}>Factions</NavLink>
         </nav>
         </div>
       </header>
