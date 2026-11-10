@@ -1,6 +1,6 @@
 import { All_Perso_card } from "../components/PersoCard";
 import { All_CHaracters } from "../data/Perso";
-
+/** @deprecated */
 const Personages = () => {
     return (
         <div>

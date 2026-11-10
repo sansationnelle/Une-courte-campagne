@@ -14,8 +14,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Oayues2';
+  src: url('../src/fonts/Oayues2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Enregistrement des classes Tailwind */
 @theme {
   --font-parchemin: 'MonParchemin', serif;
   --font-papyrus: 'Papyrus', sans-serif; /* Nom de la 2e classe */
+  --font-Oayues2: 'Oayues2', wingdings;
 }

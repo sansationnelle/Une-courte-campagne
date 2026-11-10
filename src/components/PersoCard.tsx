@@ -26,6 +26,6 @@ export const Single_Perso_Card = ({gamer}: Single) => {
 export const All_Perso_card = ({All_Perso} :All_Props) => {
     return (
     <div className="">
-        {All_Perso.map((Monst)=> (<div style={{borderColor: Get_border_color()}} className= "grid grid-rows-1 pt-4"><div style={{borderColor: Get_border_color()}} className="w-1/2 mx-auto border h-[1px] mb-4" /><Single_Perso_Card gamer={Monst}/></div>))}
+        {All_Perso.map((Monst)=> (<div style={{borderColor: Get_border_color()}} className= "grid grid-rows-1 pt-4"><div style={{borderColor: Get_border_color()}} className="w-1/2 mx-auto border-5 h-[1px] mb-4" /><Single_Perso_Card gamer={Monst}/></div>))}
     </div>);
 }
