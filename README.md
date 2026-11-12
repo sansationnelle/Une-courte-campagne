@@ -21,7 +21,7 @@ npm run dev
     [] mettre toutes les cartes (maquant: humain, mimic)
     [] Plus de précision sur la page d'une faction (mécanique de factions, (peut être un indice sur les stats))
     [] Un lexique à gauche de la page (pour les icones sur les cartes)
-    [] rangdr lA pag + bo (animation bg, bg art, implémenté le dark mode, et light mode correctement)
+    [] randr lA pag + bo (animation bg, bg art, implémenté le dark mode, et light mode correctement)
     [] page des règles
     [] page d'accueil
 

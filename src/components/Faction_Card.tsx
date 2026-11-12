@@ -4,6 +4,7 @@ import {reel_Factions} from "../data/Factions"
 import { Link } from "react-router-dom";
 import { Skelet_magie } from "../data/sortilege";
 import type { Sorts } from "../types/sorts";
+import { All_CHaracters } from "../data/Perso";
 
 type Faction_Props = {
     faction: Faction
@@ -32,6 +33,16 @@ function sort_by_faction(All_chara: Perso[]):Faction_Props[] {
         tab_of_fact[chara.faction].team.push(chara);
     }
     return Object.values(tab_of_fact)
+}
+
+export function Get_Faction_Characters(fact:Faction){
+    const fact_chara:Perso[] = []
+    for (let chara of All_CHaracters){
+        if (chara.faction == fact){
+            fact_chara.push(chara)
+        }
+    }
+    return fact_chara
 }
 
 export const All_Faction_Card = ({all_chara} : {all_chara: Perso[]}) => {

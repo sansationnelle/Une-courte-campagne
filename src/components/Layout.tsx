@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <div style={{backgroundColor: Get_bg_color()}} className="flex min-h-screen flex-col font-Oayues2">
       <header style={{backgroundColor: Get_header_color()}} className="shadow-md">
-        <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-6 py-4">
+        <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-4">
           <span className="text-xl font-bold tracking-tight text-white">
             <img src={logo} width={50} height={50} className="fit-picture" alt="Une Courte Campagne"></img>
           </span>

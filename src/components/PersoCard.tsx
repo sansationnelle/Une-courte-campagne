@@ -23,6 +23,14 @@ export const Single_Perso_Card = ({gamer}: Single) => {
     );
 }
 
+export const Solo_card = ({chara}: {chara: Perso}) => {
+    return (
+        <div>
+            {chara.categorie == "Boss"? <img src={chara.images} alt={chara.nom + " carte"} width={150} height={400} />:<img src={chara.images} alt={chara.nom + " carte"} width={100} height={350} />}
+        </div>
+    )
+}
+
 export const All_Perso_card = ({All_Perso} :All_Props) => {
     return (
     <div className="">

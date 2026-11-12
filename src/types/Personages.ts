@@ -9,6 +9,7 @@ export type True_Faction = {
     color: string
     card: string
     icon: string
+    img_mecanique: string
 }
 
 export interface inter_fact {
