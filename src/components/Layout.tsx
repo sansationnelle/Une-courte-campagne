@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import logo from '../img/logo.png';
-import { Get_bg_color, Get_header_color } from "./utilis/light-dark_mode";
+import { Get_bg_color, Get_border_color, Get_header_color } from "./utilis/light-dark_mode";
+import { colorChange } from "./utilis/Current_text_color";
 
 const links = [
   { to: "/", label: "Accueil", end: false },
@@ -12,7 +13,7 @@ const Layout = () => {
 
   return (
     <div style={{backgroundColor: Get_bg_color()}} className="flex min-h-screen flex-col font-Oayues2">
-      <header style={{backgroundColor: Get_header_color()}} className="shadow-md">
+      <header style={{backgroundColor: Get_header_color()}} className="shadow-md w-full">
         <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-4">
           <span className="text-xl font-bold tracking-tight text-white">
             <img src={logo} width={50} height={50} className="fit-picture" alt="Une Courte Campagne"></img>
@@ -23,8 +24,9 @@ const Layout = () => {
         <NavLink to="/factions" className={({ isActive }) => (isActive ? "font-bold " : "")+ hovercss}>Factions</NavLink>
         </nav>
         </div>
+        <div style={{borderColor: colorChange(Get_border_color(), {mode:"light", value:55})}} className="border"/>
       </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-8">
+      <main className="mx-auto w-full h-full px-64">
         <Outlet />
       </main>
       <footer className="text-center text-[#806943] bottom-0 p-4">Une Courte Campagne 2026</footer>

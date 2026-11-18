@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { Skelet_magie } from "../data/sortilege";
 import type { Sorts } from "../types/sorts";
 import { All_CHaracters } from "../data/Perso";
+import { Single_Perso_Card } from "./PersoCard";
+import type { Page_faction } from "../types/page_intro";
+import { colorChange } from "./utilis/Current_text_color";
 
 type Faction_Props = {
     faction: Faction
@@ -81,4 +84,25 @@ const Single_Faction_Card = ({equipe}: {equipe: Faction_Props}) => {
             {/*<All_Perso_card All_Perso={sorted_team} />*/}
         </div>
     );
+}
+
+export const Single_faction_stats = ({fact}: {fact: Page_faction}) => {
+    const facti = sort_by_faction(All_CHaracters).filter((val) => val.faction == fact.faction)
+    const team = Boss_First(facti[0].team)
+    const Cur_fact = reel_Factions[fact.faction]
+    return (
+        <>
+            {team.map((persos) => (
+                <div style={{backgroundImage: `url(${fact.livre_bg})`, backgroundColor: colorChange(Cur_fact.color), borderColor: Get_border_color()}} className="mx-auto border-2 whitespace-pre-line text-center h-3/4">
+                    <div className="mb-7"/>
+                    <div style={{ backgroundImage: `url(${fact.Boss_img})`, backgroundSize: '300px 280px'}} className="min-h-screen bg-no-repeat bg-right">
+                        {/* texte*/}
+                        <div style={{color:colorChange("#EDB657", {mode: "light", value:0})}} className="text-top">
+                            <Single_Perso_Card gamer={persos}/>
+                        </div>
+                    </div>
+                </div>
+        ))}
+        </>
+    )
 }

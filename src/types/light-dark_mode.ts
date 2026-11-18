@@ -7,8 +7,8 @@ export interface mode_color {
 
 export const Dark_mode:mode_color = {
     text: "#edd77a",
-    bg_color: "#534733",
-    border_color: "#2d2005",
+    bg_color: "#162E26",
+    border_color: "#B1752A",
     header_color: "#645531"
 }
 
