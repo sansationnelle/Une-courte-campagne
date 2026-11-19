@@ -15,13 +15,14 @@ puis ouvrez ```http://localhost:5173```
 ```text
 	Personage() (dans List_persos.tsx) (page à suprimmer)
     Faction_color() et Faction_card() (remplacé par True_faction plus particulièrement par la valeur reel_faction (dans data/Faction.ts))
+    page Single_faction est obsolète, remplacé par Updated_Single_Faction
 ```
 
 # à Faire
     [] mettre toutes les cartes (maquant: humain, mimic) (plus tard)
-    [en cours 30%] Plus de précision sur la page d'une faction (mécanique de factions, (peut être un indice sur les stats))
+    [en cours 45%] Plus de précision sur la page d'une faction (mécanique de factions, (peut être un indice sur les stats))
     [] Un lexique à gauche de la page (pour les icones sur les cartes)
-    [25%] randr lA pag + bo (animation bg, bg art, implémenté le dark mode, et light mode correctement)
+    [35%] randr lA pag + bo (animation bg, bg art, implémenté le dark mode, et light mode correctement)
     [] page des règles
     [] page d'accueil
 

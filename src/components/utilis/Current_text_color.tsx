@@ -80,7 +80,7 @@ export function colorChange(color:string, options:Props_colorChange= {}):string{
     const red = parseInt(non_hex.substring(0, 2), 16)
     const green = parseInt(non_hex.substring(2, 4), 16)
     const blue = parseInt(non_hex.substring(4, 6), 16)
-    const toHex = (n: number) => n.toString(16).padStart(2, "0");
+    const toHex = (n: number) => Math.min(255, Math.max(0, Math.round(n))).toString(16).padStart(2, "0");
     switch (mode) {
         case "light":
           return `#${toHex(red + value)}${toHex(green + value)}${toHex(blue + value)}`

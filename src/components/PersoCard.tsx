@@ -24,6 +24,7 @@ export const Single_Perso_Card = ({gamer}: Single) => {
             <p className="mb-2">- Déplacement: {gamer.stats.move}  </p>
             <p className="mb-2">- Portée: {gamer.stats.range}</p>
             <p className="mb-2">- Taille: {gamer.stats.taille}m</p>
+            <p className="mb-2">- passifs: {gamer.passif}</p>
         {/*Lore: {gamer.histoire}*/}
         </div>
     </div>

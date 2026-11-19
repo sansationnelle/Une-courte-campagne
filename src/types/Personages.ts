@@ -35,6 +35,7 @@ export const Faction_card: inter_fact = {
     Skelet: skelet,
     Mimic: "Placeholder"
 }
+
 export type Stats = {
     att: number
     def: number

@@ -13,7 +13,7 @@ const Layout = () => {
 
   return (
     <div style={{backgroundColor: Get_bg_color()}} className="flex min-h-screen flex-col font-Oayues2">
-      <header style={{backgroundColor: Get_header_color()}} className="shadow-md w-full">
+      <header style={{backgroundColor: Get_header_color()}} className="shadow-md w-full overflow-hidden">
         <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-4 py-4">
           <span className="text-xl font-bold tracking-tight text-white">
             <img src={logo} width={50} height={50} className="fit-picture" alt="Une Courte Campagne"></img>
@@ -26,10 +26,10 @@ const Layout = () => {
         </div>
         <div style={{borderColor: colorChange(Get_border_color(), {mode:"light", value:55})}} className="border"/>
       </header>
-      <main className="mx-auto w-full h-full px-64">
+      <main className="flex-1 w-full overflow-auto">
         <Outlet />
       </main>
-      <footer className="text-center text-[#806943] bottom-0 p-4">Une Courte Campagne 2026</footer>
+      <footer className="shrink-0 text-center text-[#806943]">Une Courte Campagne 2026</footer>
     </div>
   );
 };
